@@ -34,7 +34,11 @@ public class JumpingCharacter : MonoBehaviour
     private void FixedUpdate()
     {
         transform.position = new Vector3(transform.position.x + scrollingSpeed, transform.position.y, transform.position.z);
-        if(wasDead)
+        if (wasDead)
+        {
             SceneManager.LoadScene(0);
+            UIManager.UIMenu.Show();
+        }
+            
     }
 }

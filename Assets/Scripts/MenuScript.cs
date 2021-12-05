@@ -11,6 +11,7 @@ public class MenuScript : MonoBehaviour
     {
         //Application.LoadLevelAsync("MAP1");
         SceneManager.LoadSceneAsync("MAP1");
+        UIManager.UIMenu.Hide();
         //Application.LoadLevel("MAP1");
     }
     

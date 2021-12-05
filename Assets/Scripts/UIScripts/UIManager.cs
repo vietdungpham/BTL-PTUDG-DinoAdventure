@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoSingleton<UIManager>
+public class UIManager : MonoBehaviour
 {
     [SerializeField] UIMenu uiMenu;
     [SerializeField] UISettings uiSettings;
@@ -10,11 +10,18 @@ public class UIManager : MonoSingleton<UIManager>
     [SerializeField] UIGamePlay uIGamePlay;
     private GameState gameState;
 
+    public static UIManager Instance;
+
     public static UIMenu UIMenu => Instance.uiMenu;
     public static UISettings UISettings => Instance.uiSettings;
     public static UIAboutGroup UIAboutGroup => Instance.uiAboutGroup;
     public static UIGamePlay UIGamePlay => Instance.uIGamePlay;
     public static GameState GAMESTATE { get; set; }
+
+    public void Awake()
+    {
+        Instance = this;
+    }
 
     public static void HideAllUI()
     {
