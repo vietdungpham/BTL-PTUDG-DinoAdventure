@@ -38,7 +38,6 @@ public class JumpingCharacter : MonoBehaviour
         {
             SceneManager.LoadScene(0);
             UIManager.UIMenu.Show();
-        }
-            
+        }            
     }
 }

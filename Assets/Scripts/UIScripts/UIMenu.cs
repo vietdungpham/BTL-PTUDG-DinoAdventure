@@ -12,7 +12,8 @@ public class UIMenu : UIBase
 
     public void OnClickStart()
     {
-        SceneManager.LoadSceneAsync("MAP1");
+        LoadSceneUtility.LoadScene(LoadSceneUtility.GamePlay);
+        UIManager.UIMenu.Hide();
     }
 
     public void OnClickSettings()
